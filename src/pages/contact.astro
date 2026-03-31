@@ -5,6 +5,7 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Contact" description="Get in touch with Zeus Property Management. Book a free appraisal or ask us anything.">
 
   <div class="page-hero">
+    <img src="/images/zeus-full.png" alt="" class="page-hero-zeus" aria-hidden="true" />
     <div class="container">
       <span class="section-label">Contact Us</span>
       <h1 class="page-title">Let's Talk About Your Property</h1>
@@ -157,8 +158,21 @@ import Layout from '../layouts/Layout.astro';
 
 <style>
   .page-hero {
+    position: relative;
+    overflow: hidden;
     background: var(--navy);
     padding: 160px 0 80px;
+  }
+
+  .page-hero-zeus {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 130%;
+    width: auto;
+    opacity: 0.12;
+    pointer-events: none;
   }
 
   .page-hero .section-label { margin-bottom: 16px; }

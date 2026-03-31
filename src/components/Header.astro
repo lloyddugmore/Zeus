@@ -11,11 +11,7 @@ const currentPath = Astro.url.pathname;
 <header class="header" id="header">
   <div class="container">
     <a href="/" class="logo" aria-label="Zeus Property Management home">
-      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <polygon points="18,2 34,32 2,32" fill="none" stroke="#c9a84c" stroke-width="2.5"/>
-        <polygon points="18,10 28,28 8,28" fill="#c9a84c" opacity="0.25"/>
-        <line x1="18" y1="14" x2="18" y2="26" stroke="#c9a84c" stroke-width="2" stroke-linecap="round"/>
-      </svg>
+      <img src="/images/zeus-logo.png" alt="Zeus" class="logo-img" />
       <span class="logo-text">Zeus<span class="logo-sub"> Property</span></span>
     </a>
 
@@ -89,6 +85,16 @@ const currentPath = Astro.url.pathname;
     display: flex;
     align-items: center;
     gap: 10px;
+    flex-shrink: 0;
+  }
+
+  .logo-img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 15%;
+    border: 1.5px solid rgba(201, 168, 76, 0.6);
     flex-shrink: 0;
   }
 
