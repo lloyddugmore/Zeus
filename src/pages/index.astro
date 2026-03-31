@@ -1,0 +1,664 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Home" description="Zeus Property Management — Professional property management in Melbourne. Maximise your investment with our expert team.">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="container hero-content">
+      <span class="section-label">Melbourne's Premier Property Managers</span>
+      <h1 class="hero-title">
+        Property Management<br/>
+        Built on <span class="hero-accent">Trust & Results</span>
+      </h1>
+      <p class="hero-desc">
+        Zeus takes the complexity out of owning investment property. From tenant screening to maintenance — we manage everything so you don't have to.
+      </p>
+      <div class="hero-actions">
+        <a href="/contact" class="btn btn-primary">Get a Free Appraisal</a>
+        <a href="/services" class="btn btn-outline">Our Services</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <strong>500+</strong>
+          <span>Properties Managed</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <strong>98%</strong>
+          <span>Occupancy Rate</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <strong>15+</strong>
+          <span>Years Experience</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <svg width="16" height="24" viewBox="0 0 16 24" fill="none">
+        <rect x="1" y="1" width="14" height="22" rx="7" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+        <circle cx="8" cy="8" r="2.5" fill="rgba(255,255,255,0.6)"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- SERVICES PREVIEW -->
+  <section class="section services-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What We Do</span>
+        <h2 class="section-title">Full-Service Property Management</h2>
+        <p class="section-subtitle">
+          Everything your investment property needs — handled by specialists who care as much about your asset as you do.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        {[
+          {
+            icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+            title: 'Tenant Screening',
+            desc: 'Rigorous background checks, credit history, rental references and employment verification to find quality tenants.',
+          },
+          {
+            icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>`,
+            title: 'Rent Collection',
+            desc: 'Automated rent processing, arrears management and transparent financial reporting every month.',
+          },
+          {
+            icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>`,
+            title: 'Maintenance',
+            desc: 'Proactive property maintenance with a trusted network of licensed tradespeople available 24/7.',
+          },
+          {
+            icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>`,
+            title: 'Financial Reporting',
+            desc: 'Detailed income statements, expense tracking, tax summaries and owner portals updated in real time.',
+          },
+          {
+            icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>`,
+            title: 'Lease Management',
+            desc: 'Legally compliant leases, renewals, rent reviews and end-of-tenancy processes managed completely.',
+          },
+          {
+            icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>`,
+            title: 'Vacancy Marketing',
+            desc: 'Professional photography, premium listings across all major platforms and rapid tenant placement.',
+          },
+        ].map(service => (
+          <div class="service-card">
+            <div class="service-icon" set:html={service.icon} />
+            <h3>{service.title}</h3>
+            <p>{service.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="services-cta">
+        <a href="/services" class="btn btn-outline-dark">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY ZEUS -->
+  <section class="section why-section">
+    <div class="container why-grid">
+      <div class="why-visual">
+        <div class="why-card why-card-main">
+          <div class="stat-big">
+            <span class="stat-number">98%</span>
+            <span class="stat-label">Average Occupancy</span>
+          </div>
+          <p class="stat-caption">Consistently above the industry average of 94%</p>
+        </div>
+        <div class="why-card why-card-sm why-card-top">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <strong>4.9 / 5</strong>
+          <span>Owner Rating</span>
+        </div>
+        <div class="why-card why-card-sm why-card-bot">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <strong>48 hrs</strong>
+          <span>Avg. Response Time</span>
+        </div>
+      </div>
+
+      <div class="why-content">
+        <span class="section-label">Why Zeus</span>
+        <h2 class="section-title">A Partner, Not Just a Manager</h2>
+        <p class="section-subtitle">
+          We believe your investment property should work hard for you. Zeus combines local expertise, technology and personal service to deliver results you can see.
+        </p>
+
+        <ul class="why-list">
+          {[
+            ['Dedicated property manager — one point of contact, always.', ''],
+            ['Owner portal with real-time access to financials and maintenance.', ''],
+            ['No hidden fees. Transparent, all-inclusive pricing.', ''],
+            ['Proactive rent reviews to maximise your rental yield.', ''],
+          ].map(([text]) => (
+            <li class="why-item">
+              <span class="why-check">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              {text}
+            </li>
+          ))}
+        </ul>
+
+        <a href="/about" class="btn btn-primary">Learn About Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section testimonials-section">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-label">What Owners Say</span>
+        <h2 class="section-title">Trusted by Property Investors</h2>
+      </div>
+
+      <div class="testimonials-grid">
+        {[
+          {
+            quote: "Switching to Zeus was the best decision I made for my investment property. Occupancy has been continuous and the monthly reporting is genuinely useful.",
+            name: "Sarah Mitchell",
+            role: "Owner, 3 Properties",
+            initials: "SM",
+          },
+          {
+            quote: "Finally a property manager that actually responds to calls. My property was leased within five days of listing — above asking rent.",
+            name: "James Thornton",
+            role: "Owner, 1 Property",
+            initials: "JT",
+          },
+          {
+            quote: "Zeus handled a difficult tenancy situation professionally and kept me informed every step of the way. I can't recommend them enough.",
+            name: "Priya Sharma",
+            role: "Owner, 2 Properties",
+            initials: "PS",
+          },
+        ].map(t => (
+          <div class="testimonial-card">
+            <div class="stars">
+              {Array(5).fill(0).map(() => (
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="#c9a84c"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              ))}
+            </div>
+            <p class="testimonial-quote">"{t.quote}"</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">{t.initials}</div>
+              <div>
+                <strong>{t.name}</strong>
+                <span>{t.role}</span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="container cta-content">
+      <div>
+        <h2 class="cta-title">Ready to Maximise Your Investment?</h2>
+        <p class="cta-desc">Get a free, no-obligation appraisal from our team today.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Book a Free Appraisal</a>
+        <a href="tel:1300123456" class="btn btn-outline">Call Us Today</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* HERO */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(135deg, #0d1b2a 0%, #1b3a5c 60%, #0d1b2a 100%);
+  }
+
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 20% 50%, rgba(201,168,76,0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(201,168,76,0.05) 0%, transparent 40%);
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.015'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    padding-top: 120px;
+    padding-bottom: 80px;
+    max-width: 760px;
+  }
+
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+
+  .hero-accent {
+    color: var(--gold);
+  }
+
+  .hero-desc {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: rgba(255,255,255,0.78);
+    max-width: 540px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 56px;
+  }
+
+  .hero-trust {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .trust-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .trust-item strong {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--white);
+    font-family: 'Playfair Display', serif;
+  }
+
+  .trust-item span {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.55);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .trust-divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(255,255,255,0.15);
+  }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255,255,255,0.4);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  /* SERVICES */
+  .services-section {
+    background: var(--off-white);
+  }
+
+  .section-header {
+    margin-bottom: 56px;
+  }
+
+  .section-header.center {
+    text-align: center;
+  }
+
+  .section-header.center .section-subtitle {
+    margin: 0 auto;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .service-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 32px 28px;
+    border: 1px solid var(--border);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .service-icon {
+    width: 56px;
+    height: 56px;
+    background: rgba(201,168,76,0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: var(--gold);
+  }
+
+  .service-card h3 {
+    font-size: 1.05rem;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+
+  .service-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .services-cta {
+    text-align: center;
+    margin-top: 48px;
+  }
+
+  /* WHY ZEUS */
+  .why-section {
+    background: var(--white);
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .why-visual {
+    position: relative;
+    height: 420px;
+  }
+
+  .why-card {
+    position: absolute;
+    background: var(--white);
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border);
+  }
+
+  .why-card-main {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 260px;
+    background: var(--navy);
+    color: var(--white);
+    border: none;
+  }
+
+  .stat-big {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 12px;
+  }
+
+  .stat-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.75rem;
+  }
+
+  .stat-caption {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.5;
+  }
+
+  .why-card-sm {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 200px;
+    padding: 20px 20px;
+  }
+
+  .why-card-sm strong {
+    font-size: 1.3rem;
+    font-family: 'Playfair Display', serif;
+    color: var(--navy);
+    display: block;
+    line-height: 1;
+  }
+
+  .why-card-sm span {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    display: block;
+  }
+
+  .why-card-top {
+    right: 0;
+    top: 60px;
+  }
+
+  .why-card-bot {
+    right: 20px;
+    bottom: 60px;
+  }
+
+  .why-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 36px;
+  }
+
+  .why-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: var(--text);
+  }
+
+  .why-check {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--gold);
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+  }
+
+  /* TESTIMONIALS */
+  .testimonials-section {
+    background: var(--off-white);
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .testimonial-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 32px;
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .stars {
+    display: flex;
+    gap: 3px;
+  }
+
+  .testimonial-quote {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.7;
+    flex: 1;
+    font-style: italic;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .testimonial-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+
+  .testimonial-author strong {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--navy);
+  }
+
+  .testimonial-author span {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  /* CTA BANNER */
+  .cta-banner {
+    background: var(--navy);
+    padding: 80px 0;
+  }
+
+  .cta-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .cta-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+
+  .cta-desc {
+    color: rgba(255,255,255,0.65);
+    font-size: 1rem;
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .why-grid {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+    .why-visual {
+      height: 300px;
+    }
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+    .hero-actions {
+      flex-direction: column;
+    }
+    .cta-content {
+      flex-direction: column;
+      text-align: center;
+    }
+    .cta-actions {
+      width: 100%;
+      justify-content: center;
+    }
+    .why-card-sm {
+      display: none;
+    }
+  }
+</style>

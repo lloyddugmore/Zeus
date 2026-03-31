@@ -1,0 +1,397 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact" description="Get in touch with Zeus Property Management. Book a free appraisal or ask us anything.">
+
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-label">Contact Us</span>
+      <h1 class="page-title">Let's Talk About Your Property</h1>
+      <p class="page-desc">
+        Whether you're ready to switch managers or just exploring your options, we'd love to hear from you.
+      </p>
+    </div>
+  </div>
+
+  <section class="section contact-section">
+    <div class="container contact-grid">
+
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <p class="contact-intro">
+          Our team typically responds within one business day. For urgent matters, please call us directly.
+        </p>
+
+        <div class="info-items">
+          <div class="info-item">
+            <div class="info-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <strong>Office</strong>
+              <span>123 Collins Street, Melbourne VIC 3000</span>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.87 12 19.79 19.79 0 0 1 1.77 3.26 2 2 0 0 1 3.74 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <strong>Phone</strong>
+              <span><a href="tel:0312345678">(03) 1300 123 456</a></span>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <strong>Email</strong>
+              <span><a href="mailto:hello@zeuspropertymanagement.com">hello@zeuspropertymanagement.com</a></span>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <div>
+              <strong>Office Hours</strong>
+              <span>Mon – Fri: 9:00am – 5:30pm</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="emergency-box">
+          <h3>After-Hours Maintenance</h3>
+          <p>For urgent maintenance outside office hours, tenants and owners can call our 24/7 emergency line:</p>
+          <a href="tel:1800999888" class="emergency-number">1800 999 888</a>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap">
+        <form class="contact-form" id="contactForm" novalidate>
+          <h2>Send Us a Message</h2>
+          <p class="form-desc">Fill in the form and we'll get back to you within one business day.</p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name <span class="required">*</span></label>
+              <input type="text" id="firstName" name="firstName" required autocomplete="given-name" placeholder="Jane" />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name <span class="required">*</span></label>
+              <input type="text" id="lastName" name="lastName" required autocomplete="family-name" placeholder="Smith" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="jane@example.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="0400 000 000" />
+          </div>
+
+          <div class="form-group">
+            <label for="enquiry">Enquiry Type <span class="required">*</span></label>
+            <select id="enquiry" name="enquiry" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="appraisal">Free Property Appraisal</option>
+              <option value="switching">Switching Property Managers</option>
+              <option value="services">Learn About Our Services</option>
+              <option value="maintenance">Maintenance Request</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="property">Property Address (if applicable)</label>
+            <input type="text" id="property" name="property" placeholder="1/123 Example St, Melbourne" />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message <span class="required">*</span></label>
+            <textarea id="message" name="message" required rows="5" placeholder="Tell us a bit about your property and what you're looking for..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary submit-btn">
+            Send Message
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+
+          <div class="form-success" id="formSuccess" aria-live="polite">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <p>Thanks! We'll be in touch shortly.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<script>
+  const form = document.getElementById('contactForm') as HTMLFormElement;
+  const success = document.getElementById('formSuccess');
+
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    const btn = form.querySelector('.submit-btn') as HTMLButtonElement;
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    setTimeout(() => {
+      form.reset();
+      btn.style.display = 'none';
+      if (success) success.style.display = 'flex';
+    }, 800);
+  });
+</script>
+
+<style>
+  .page-hero {
+    background: var(--navy);
+    padding: 160px 0 80px;
+  }
+
+  .page-hero .section-label { margin-bottom: 16px; }
+
+  .page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: var(--white);
+    margin-bottom: 20px;
+    max-width: 600px;
+  }
+
+  .page-desc {
+    font-size: 1.125rem;
+    color: rgba(255,255,255,0.7);
+    max-width: 500px;
+    line-height: 1.7;
+  }
+
+  .contact-section {
+    background: var(--off-white);
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 64px;
+    align-items: start;
+  }
+
+  .contact-info h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    color: var(--navy);
+    margin-bottom: 16px;
+  }
+
+  .contact-intro {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 36px;
+  }
+
+  .info-items {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .info-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+
+  .info-item strong {
+    display: block;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+    font-weight: 600;
+  }
+
+  .info-item span {
+    font-size: 0.95rem;
+    color: var(--text);
+  }
+
+  .info-item a {
+    color: var(--navy);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .emergency-box {
+    background: var(--navy);
+    border-radius: 12px;
+    padding: 28px 24px;
+  }
+
+  .emergency-box h3 {
+    font-size: 0.9rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+  }
+
+  .emergency-box p {
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .emergency-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    color: var(--white);
+    font-weight: 700;
+  }
+
+  /* FORM */
+  .contact-form-wrap {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 48px 40px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+  }
+
+  .contact-form h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+
+  .form-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 20px;
+  }
+
+  label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  .required { color: var(--gold); }
+
+  input, select, textarea {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text);
+    background: var(--off-white);
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    width: 100%;
+    outline: none;
+  }
+
+  input::placeholder, textarea::placeholder { color: #b0b7c3; }
+
+  input:focus, select:focus, textarea:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(201,168,76,0.15);
+    background: var(--white);
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 40px;
+    cursor: pointer;
+  }
+
+  .submit-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 16px;
+    font-size: 1rem;
+    margin-top: 8px;
+  }
+
+  .form-success {
+    display: none;
+    align-items: center;
+    gap: 12px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 16px;
+  }
+
+  .form-success p {
+    color: #15803d;
+    font-weight: 500;
+  }
+
+  @media (max-width: 1024px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .contact-form-wrap {
+      padding: 32px 24px;
+    }
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

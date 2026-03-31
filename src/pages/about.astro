@@ -1,0 +1,395 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const team = [
+  {
+    name: 'Alexandra Papadopoulos',
+    role: 'Founder & Director',
+    bio: 'With over 20 years in Melbourne real estate, Alexandra founded Zeus to deliver the high-touch property management she felt was missing in the market.',
+    initials: 'AP',
+  },
+  {
+    name: 'Marcus Webb',
+    role: 'Head of Property Management',
+    bio: 'Marcus oversees our portfolio of managed properties and leads our property management team with a focus on owner outcomes and tenant satisfaction.',
+    initials: 'MW',
+  },
+  {
+    name: 'Priya Nair',
+    role: 'Senior Property Manager',
+    bio: 'Priya brings eight years of experience managing residential and commercial properties across Melbourne\'s inner north and CBD fringe.',
+    initials: 'PN',
+  },
+  {
+    name: 'Tom Gallagher',
+    role: 'Maintenance Coordinator',
+    bio: 'Tom manages our network of trusted tradespeople, ensuring every maintenance request is resolved quickly and cost-effectively.',
+    initials: 'TG',
+  },
+];
+
+const values = [
+  {
+    icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>`,
+    title: 'Owner-First Mindset',
+    desc: 'Every decision we make is guided by what\'s best for you, the owner. Your investment is our priority.',
+  },
+  {
+    icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
+    title: 'Transparency',
+    desc: 'No hidden fees, no surprises. We communicate openly and keep you fully informed at every stage.',
+  },
+  {
+    icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
+    title: 'Excellence',
+    desc: 'We hold ourselves to the highest standards — from the quality of our tenant screening to the speed of our maintenance response.',
+  },
+  {
+    icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+    title: 'Relationships',
+    desc: 'We invest in long-term relationships with owners, tenants and tradespeople — because trust is built over time.',
+  },
+];
+---
+
+<Layout title="About" description="Learn about Zeus Property Management — our story, values and the team dedicated to your investment.">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-label">Our Story</span>
+      <h1 class="page-title">Built on a Better Way to Manage Property</h1>
+      <p class="page-desc">
+        Zeus was founded because we believed property owners deserved more — more communication, more transparency and better results.
+      </p>
+    </div>
+  </div>
+
+  <!-- STORY -->
+  <section class="section story-section">
+    <div class="container story-grid">
+      <div class="story-content">
+        <span class="section-label">Who We Are</span>
+        <h2 class="section-title">15 Years of Protecting Melbourne Investments</h2>
+        <p>
+          Zeus Property Management was established in 2010 with a clear purpose: to provide property investors with professional, transparent management that truly maximises their return.
+        </p>
+        <p>
+          What began as a boutique agency has grown into one of Melbourne's most trusted property management firms, with over 500 properties under management and a reputation built on results, communication and integrity.
+        </p>
+        <p>
+          We're not a faceless corporation. We're a tight-knit team of property professionals who genuinely care about your investment — and we prove it every day.
+        </p>
+      </div>
+      <div class="story-stats">
+        {[
+          { number: '500+', label: 'Properties Managed' },
+          { number: '98%', label: 'Occupancy Rate' },
+          { number: '15+', label: 'Years in Business' },
+          { number: '4.9', label: 'Average Owner Rating' },
+        ].map(stat => (
+          <div class="story-stat">
+            <span class="story-stat-number">{stat.number}</span>
+            <span class="story-stat-label">{stat.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="section values-section" id="values">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-label">Our Values</span>
+        <h2 class="section-title">What We Stand For</h2>
+        <p class="section-subtitle">
+          These aren't just words on a wall — they're the principles that guide every interaction and every decision we make.
+        </p>
+      </div>
+      <div class="values-grid">
+        {values.map(v => (
+          <div class="value-card">
+            <div class="value-icon" set:html={v.icon} />
+            <h3>{v.title}</h3>
+            <p>{v.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="section team-section" id="team">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-label">The Team</span>
+        <h2 class="section-title">Meet the People Behind Zeus</h2>
+        <p class="section-subtitle">
+          Our experienced team is dedicated to protecting and growing your investment — and to making the experience seamless for you.
+        </p>
+      </div>
+      <div class="team-grid">
+        {team.map(member => (
+          <div class="team-card">
+            <div class="team-avatar">{member.initials}</div>
+            <h3>{member.name}</h3>
+            <p class="team-role">{member.role}</p>
+            <p class="team-bio">{member.bio}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container cta-inner">
+      <h2>Join Hundreds of Satisfied Property Owners</h2>
+      <p>Let's talk about how Zeus can manage your investment property.</p>
+      <a href="/contact" class="btn btn-primary">Get in Touch</a>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .page-hero {
+    background: var(--navy);
+    padding: 160px 0 80px;
+  }
+
+  .page-hero .section-label { margin-bottom: 16px; }
+
+  .page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: var(--white);
+    margin-bottom: 20px;
+    max-width: 700px;
+  }
+
+  .page-desc {
+    font-size: 1.125rem;
+    color: rgba(255,255,255,0.7);
+    max-width: 540px;
+    line-height: 1.7;
+  }
+
+  /* STORY */
+  .story-section {
+    background: var(--white);
+  }
+
+  .story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .story-content p {
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+
+  .story-content .section-title {
+    margin-bottom: 28px;
+  }
+
+  .story-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .story-stat {
+    background: var(--off-white);
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .story-stat-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .story-stat-label {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+  }
+
+  /* VALUES */
+  .values-section {
+    background: var(--navy);
+  }
+
+  .values-section .section-label { color: var(--gold); }
+  .values-section .section-title { color: var(--white); }
+  .values-section .section-subtitle { color: rgba(255,255,255,0.6); }
+
+  .section-header.center {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+
+  .section-header.center .section-subtitle {
+    margin: 0 auto;
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  .value-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 32px 24px;
+    transition: background 0.2s;
+  }
+
+  .value-card:hover {
+    background: rgba(255,255,255,0.08);
+  }
+
+  .value-icon {
+    width: 56px;
+    height: 56px;
+    background: rgba(201,168,76,0.15);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  .value-card h3 {
+    font-size: 1rem;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+
+  .value-card p {
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.65;
+  }
+
+  /* TEAM */
+  .team-section {
+    background: var(--off-white);
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  .team-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 32px 24px;
+    border: 1px solid var(--border);
+    text-align: center;
+  }
+
+  .team-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 auto 16px;
+  }
+
+  .team-card h3 {
+    font-size: 1rem;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+
+  .team-role {
+    font-size: 0.78rem;
+    color: var(--gold);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+  }
+
+  .team-bio {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+  }
+
+  /* CTA */
+  .cta-banner {
+    background: var(--white);
+    border-top: 1px solid var(--border);
+    padding: 80px 0;
+  }
+
+  .cta-inner {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .cta-inner h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    color: var(--navy);
+  }
+
+  .cta-inner p {
+    color: var(--text-muted);
+    max-width: 400px;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 1024px) {
+    .values-grid,
+    .team-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .story-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .values-grid,
+    .team-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

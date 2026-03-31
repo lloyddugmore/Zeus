@@ -1,0 +1,292 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const services = [
+  {
+    id: 'tenant-screening',
+    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+    title: 'Tenant Screening',
+    tagline: 'Finding tenants you can rely on.',
+    desc: 'Our multi-step screening process protects your investment from day one. We conduct in-depth background checks including national tenancy database searches, credit assessments, employment and income verification, and personal and rental reference checks.',
+    features: [
+      'National tenancy database checks',
+      'Credit history assessment',
+      'Employment & income verification',
+      'Rental history & reference checks',
+      'ID verification',
+    ],
+  },
+  {
+    id: 'rent-collection',
+    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>`,
+    title: 'Rent Collection',
+    tagline: 'Your income, on time, every time.',
+    desc: 'We take the stress out of rent collection with automated payment processing, proactive arrears management and prompt disbursement to your account. All transactions are fully recorded and available through your owner portal.',
+    features: [
+      'Automated rent collection',
+      'Proactive arrears follow-up',
+      'Fast disbursements to your account',
+      'Monthly financial statements',
+      'EOFY tax summaries',
+    ],
+  },
+  {
+    id: 'maintenance',
+    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>`,
+    title: 'Maintenance & Repairs',
+    tagline: 'Protecting your asset proactively.',
+    desc: 'Our dedicated maintenance team coordinates repairs quickly and cost-effectively. We leverage a vetted network of licensed tradespeople, negotiate competitive rates on your behalf and keep you informed at every step.',
+    features: [
+      '24/7 emergency maintenance line',
+      'Vetted, licensed tradespeople network',
+      'Competitive pricing & no markups',
+      'Regular routine inspections',
+      'Maintenance history reporting',
+    ],
+  },
+  {
+    id: 'financial-reporting',
+    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>`,
+    title: 'Financial Reporting',
+    tagline: 'Complete visibility over your investment.',
+    desc: 'Stay fully informed with detailed monthly statements, annual tax reports, and real-time access to your property\'s financials through our owner portal. We make it simple to understand how your investment is performing.',
+    features: [
+      'Monthly income & expense statements',
+      'Annual tax summary reports',
+      'Real-time owner portal access',
+      'Expense tracking & receipts',
+      'Rental yield analysis',
+    ],
+  },
+  {
+    id: 'lease-management',
+    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>`,
+    title: 'Lease Management',
+    tagline: 'Every document, handled correctly.',
+    desc: 'From drafting legally compliant lease agreements to managing renewals, rent increases and end-of-tenancy, we handle every aspect of the leasing lifecycle with precision and in full accordance with Victorian tenancy law.',
+    features: [
+      'Legally compliant lease preparation',
+      'Lease renewals & extensions',
+      'Rent review negotiations',
+      'Bond lodgement & management',
+      'End-of-tenancy inspections & processing',
+    ],
+  },
+  {
+    id: 'vacancy-marketing',
+    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>`,
+    title: 'Vacancy Marketing',
+    tagline: 'Minimise vacancy. Maximise yield.',
+    desc: 'When your property becomes available, we move fast. Professional photography, compelling listings across all major platforms and our established tenant database mean we find the right tenant at the right rent — quickly.',
+    features: [
+      'Professional photography & floorplans',
+      'Premium listings on all major portals',
+      'Social media marketing',
+      'Open-for-inspection management',
+      'Rapid tenant placement',
+    ],
+  },
+];
+---
+
+<Layout title="Services" description="Full-service property management from Zeus — tenant screening, rent collection, maintenance, leasing and more.">
+
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-label">Our Services</span>
+      <h1 class="page-title">Everything Your Property Needs</h1>
+      <p class="page-desc">
+        End-to-end property management — from finding tenants to handling maintenance and everything in between.
+      </p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="services-list">
+        {services.map((service, i) => (
+          <div class={`service-row ${i % 2 === 1 ? 'reverse' : ''}`} id={service.id}>
+            <div class="service-icon-wrap">
+              <div class="service-icon-inner" set:html={service.icon} />
+            </div>
+            <div class="service-body">
+              <p class="service-tagline">{service.tagline}</p>
+              <h2 class="service-title">{service.title}</h2>
+              <p class="service-desc">{service.desc}</p>
+              <ul class="feature-list">
+                {service.features.map(f => (
+                  <li>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    {f}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container cta-inner">
+      <h2>Not Sure Where to Start?</h2>
+      <p>Talk to one of our property managers today — no obligation, just honest advice.</p>
+      <a href="/contact" class="btn btn-primary">Get in Touch</a>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .page-hero {
+    background: var(--navy);
+    padding: 160px 0 80px;
+  }
+
+  .page-hero .section-label { margin-bottom: 16px; }
+
+  .page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+
+  .page-desc {
+    font-size: 1.125rem;
+    color: rgba(255,255,255,0.7);
+    max-width: 540px;
+    line-height: 1.7;
+  }
+
+  .services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  .service-row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 60px;
+    align-items: start;
+    padding-bottom: 80px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .service-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .service-row.reverse {
+    grid-template-columns: 1fr 200px;
+  }
+
+  .service-row.reverse .service-icon-wrap {
+    order: 2;
+  }
+
+  .service-row.reverse .service-body {
+    order: 1;
+  }
+
+  .service-icon-wrap {
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+  }
+
+  .service-icon-inner {
+    width: 96px;
+    height: 96px;
+    background: rgba(201,168,76,0.1);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+
+  .service-tagline {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .service-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    color: var(--navy);
+    margin-bottom: 16px;
+  }
+
+  .service-desc {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.75;
+    margin-bottom: 28px;
+    max-width: 640px;
+  }
+
+  .feature-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: var(--text);
+  }
+
+  .cta-banner {
+    background: var(--off-white);
+    border-top: 1px solid var(--border);
+    padding: 80px 0;
+  }
+
+  .cta-inner {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .cta-inner h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    color: var(--navy);
+  }
+
+  .cta-inner p {
+    color: var(--text-muted);
+    max-width: 420px;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .service-row,
+    .service-row.reverse {
+      grid-template-columns: 1fr;
+    }
+    .service-row.reverse .service-icon-wrap,
+    .service-row.reverse .service-body {
+      order: unset;
+    }
+    .service-icon-wrap {
+      justify-content: flex-start;
+    }
+  }
+</style>
